@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>VOTE DAT CUPCAKE</title>
+    <link rel="stylesheet" href="/main.css">
+  </head>
+  <body>
+    <div id="cupcake-list">
+      <div class="singleCupcake">
+        <h2>{{getOneCupcake.name}}</h2>
+        <h4>Baker: {{getOneCupcake.baker}}</h4>
+        <h4>Ratings:</h4>
+        {{#each getOneCupcake.ratings}}
+          <span class="ratings">{{this}}</span>
+        {{/each}}
+        <h4>Avg Rating: {{getOneCupcake.averageRating}}</h4>
+        <form method="post" action="/cupcakes/ratings/{{getOneCupcake.id}}">
+          <label>Vote</label>
+          <input type="number" name="vote" min="1" max="5" value="3">
+          <button>VOTE!</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

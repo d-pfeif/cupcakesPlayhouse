@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cupcakes Playhouse</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <h1>Cupcakes Playhouse!</h1>
+    <div id="cupcake-list">
+      {{#each cupcakes}}
+        <a href="/cupcakes/{{this.id}}" class="singleCupcake">
+          <div>
+            <h3>{{this.name}}</h3>
+            <h4>Baker:{{this.baker}}</h4>
+            <h4>Rating:{{this.averageRating}}</h4>
+          </div>
+        </a>
+      {{/each}}
+    </div>
+  </body>
+</html>

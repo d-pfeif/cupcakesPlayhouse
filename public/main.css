@@ -1,0 +1,25 @@
+#cupcake-list {
+  display: flex;
+  flex-direction: row;
+  background-color: purple;
+}
+
+.singleCupcake {
+  width: 25rem;
+  margin: 1rem;
+  background-color: rgba(255, 0, 0, 0.5);
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  transition: width 2s;
+}
+
+.singleCupcake:hover {
+  width: 50rem;
+}
+
+.ratings {
+  padding: 0.5em;
+  border: 1px solid yellow;
+  border-radius: 10px;
+}
